@@ -6,6 +6,8 @@ Challenge V: Simple secondary structure prediction of proteins (H, B, L).
 
 import argparse
 import os
+import sys
+
 
 # Conformational propensities based on amino acid preferences:
 # H: Alpha helix (favored by Glu, Ala, Leu, Met, Gln, Lys, Arg)
@@ -68,12 +70,41 @@ def display_composition(predicted_structure: str) -> None:
 
     print("=" * 60)
 
-def main() -> None:
+def build_arg_parser() -> argparse.ArgumentParser:
+    """Configures and returns the argument parser with detailed, customized help."""
+    epilog_text = """
+CONFORMACIONES Y REGLAS DE PROPENSIÓN:
+  H  Hélice alfa      (Favorecida por: E, A, L, M, Q, K, R)
+  B  Hoja beta        (Favorecida por: V, I, Y, F, W, T, C)
+  L  Bucle / Loop     (Favorecida por: G, P, N, D, S, H)
+  ?  No reconocido    (Cualquier carácter ajeno a los 20 aminoácidos estándar)
+
+FORMATOS DE ENTRADA PERMITIDOS:
+  1. Secuencia directa por terminal (ej: "ACDEFGHIKLMNPQRSTVWY")
+  2. Archivo de texto plano con la secuencia (ej: sequence.txt)
+  * Tolera minúsculas/mayúsculas, espacios y saltos de línea (se normalizan automáticamente).
+
+EJEMPLOS DE USO:
+  # 1. Predicción rápida por terminal:
+  python3 predict_secondary_structure.py "MLPGLALLLLAAWTMRALEV"
+
+  # 2. Predicción desde archivo con estadísticas (-v / --verbose):
+  python3 predict_secondary_structure.py sequence.txt -v
+
+  # 3. Consultar esta ayuda detallada:
+  python3 predict_secondary_structure.py -h
+"""
     parser = argparse.ArgumentParser(
-        description="Predice la estructura secundaria (H: Hélice, B: Hoja Beta, L: Loop) de una secuencia de aminoácidos."
+        prog="predict_secondary_structure.py",
+        description="Predice la estructura secundaria (H: Hélice, B: Hoja Beta, L: Loop) de una secuencia de aminoácidos.",
+        epilog=epilog_text,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        add_help=False
     )
     parser.add_argument(
         "entrada",
+        nargs="?",
+        default=None,
         help="Secuencia proteica directa o ruta a un archivo de texto plano."
     )
     parser.add_argument(
@@ -81,8 +112,25 @@ def main() -> None:
         action="store_true",
         help="Muestra estadísticas de composición estructural."
     )
+    parser.add_argument(
+        "-h", "--help",
+        action="help",
+        help="Muestra este mensaje de ayuda detallado y finaliza."
+    )
+    return parser
+
+def main() -> None:
+    parser = build_arg_parser()
+
+    if len(sys.argv) == 1:
+        parser.print_help()
+        return
 
     args = parser.parse_args()
+    if not args.entrada:
+        parser.print_help()
+        return
+
     raw_input: str = str(args.entrada)
 
     if ("." in raw_input or "/" in raw_input) and not os.path.isfile(raw_input):

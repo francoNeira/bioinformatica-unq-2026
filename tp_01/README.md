@@ -85,8 +85,45 @@ Composición estimada:
 ```
 
 #### Ayuda del comando:
-Para consultar las opciones y sintaxis en cualquier momento:
+Para consultar las opciones, reglas de propensión y sintaxis en cualquier momento (o ejecutando el script sin argumentos):
 
 ```bash
 python3 predict_secondary_structure.py -h
 ```
+
+**Salida de ayuda:**
+
+```text
+usage: predict_secondary_structure.py [-v] [-h] [entrada]
+
+Predice la estructura secundaria (H: Hélice, B: Hoja Beta, L: Loop) de una secuencia de aminoácidos.
+
+positional arguments:
+  entrada        Secuencia proteica directa o ruta a un archivo de texto plano.
+
+options:
+  -v, --verbose  Muestra estadísticas de composición estructural.
+  -h, --help     Muestra este mensaje de ayuda detallado y finaliza.
+
+CONFORMACIONES Y REGLAS DE PROPENSIÓN:
+  H  Hélice alfa      (Favorecida por: E, A, L, M, Q, K, R)
+  B  Hoja beta        (Favorecida por: V, I, Y, F, W, T, C)
+  L  Bucle / Loop     (Favorecida por: G, P, N, D, S, H)
+  ?  No reconocido    (Cualquier carácter ajeno a los 20 aminoácidos estándar)
+
+FORMATOS DE ENTRADA PERMITIDOS:
+  1. Secuencia directa por terminal (ej: "ACDEFGHIKLMNPQRSTVWY")
+  2. Archivo de texto plano con la secuencia (ej: sequence.txt)
+  * Tolera minúsculas/mayúsculas, espacios y saltos de línea (se normalizan automáticamente).
+
+EJEMPLOS DE USO:
+  # 1. Predicción rápida por terminal:
+  python3 predict_secondary_structure.py "MLPGLALLLLAAWTMRALEV"
+
+  # 2. Predicción desde archivo con estadísticas (-v / --verbose):
+  python3 predict_secondary_structure.py sequence.txt -v
+
+  # 3. Consultar esta ayuda detallada:
+  python3 predict_secondary_structure.py -h
+```
+
