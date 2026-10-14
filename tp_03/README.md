@@ -1,6 +1,6 @@
 # Alineamientos y Búsqueda de Similitud Secuencial (BLAST)
 
-Este trabajo práctico forma parte de la clase práctica de [Alineamientos y Búsqueda de similitud secuencial](../../Introduccion_a_la_Bioinformatica/Teorico_Practicos/Bioinform%C3%A1tica_Primeros_pasos/Alineamientos_secuenciales.md) (*Bioinformática: Primeros pasos*).
+Este trabajo práctico forma parte de la clase práctica de [Alineamientos y Búsqueda de similitud secuencial](https://github.com/AJVelezRueda/Introduccion_a_la_Bioinformatica/blob/master/Teorico_Practicos/Bioinform%C3%A1tica_Primeros_pasos/Alineamientos_secuenciales.md) (*Bioinformática: Primeros pasos*).
 
 ---
 
