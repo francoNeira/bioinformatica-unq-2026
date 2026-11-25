@@ -43,7 +43,7 @@ A partir del alineamiento se observa que:
 
 > **Como vemos, el servidor nos permite elegir el modelo de sustitución. ¿A qué se refiere?**
 
-Es una descripción matemática de los cambios de aminoácidos que pueden ocurrir durante la evolución (para este análisis, IQ-TREE seleccionó el modelo DAYHOFF+G4).
+Es una descripción matemática de los cambios de aminoácidos que pueden ocurrir durante la evolución (para este análisis, IQ-TREE seleccionó por defecto el modelo DAYHOFF+G4).
 
 ---
 
@@ -64,7 +64,3 @@ Es necesario enraizar el árbol para orientar la interpretación de sus ramas. U
 El árbol resultante es [`data/iqtree3/tree.nwk`](data/iqtree3/tree.nwk); como entrada de IQ-TREE usamos el alineamiento completo en formato FASTA ([`data/clustal/clustalo-I20261124-060142-0113-60514728-p1m.fa`](data/clustal/clustalo-I20261124-060142-0113-60514728-p1m.fa)).
 
 Humano y Bartmosca se agrupan directamente, y la mosca se une después. Sus soportes son 75,3% / 74% para humano–Bartmosca y 83,1% / 84% para el grupo de los tres (SH-aLRT / UFBoot). Los demás organismos quedan fuera de este grupo.
-
-## 📚 Referencias
-
-En [`data/README.md`](data/README.md) se describe qué contiene cada archivo y subcarpeta de datos.

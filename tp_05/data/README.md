@@ -41,7 +41,3 @@ Contiene los resultados de la corrida de IQ-TREE que usó *Rhizobium sp.* como g
 - [`iqtree3_local_rooted.mldist`](iqtree3/outgroup_run/iqtree3_local_rooted.mldist): matriz de distancias estimadas por máxima verosimilitud entre las secuencias.
 - [`iqtree3_local_rooted.splits.nex`](iqtree3/outgroup_run/iqtree3_local_rooted.splits.nex): archivo NEXUS con los soportes de las ramas calculados en esta corrida.
 - [`iqtree3_local_rooted.treefile`](iqtree3/outgroup_run/iqtree3_local_rooted.treefile): árbol de máxima verosimilitud con los soportes de las ramas y *Rhizobium sp.* indicado como grupo externo.
-
-## Este índice
-
-- [`README.md`](README.md): este archivo, que resume el contenido de `data/` y sus subcarpetas.
