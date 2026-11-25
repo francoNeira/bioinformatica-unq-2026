@@ -1,0 +1,168 @@
+IQ-TREE version 3.1.4 for MacOS Intel 64-bit built Nov 24 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    MacBook-Pro-de-Gino.local (AVX512, FMA3, 16 GB RAM)
+Command: /Users/ginostatello/Documents/bioinformatica-unq-26/iqtree3/build/iqtree3 -s clustalo-I20261124-060142-0113-60514728-p1m.fa -st AA -m MFP -B 1000 --alrt 1000 -nt AUTO --prefix iqtree3_local
+Seed:    377989 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Nov 24 23:59:46 2026
+Kernel:  AVX+FMA - auto-detect threads (8 CPU cores detected)
+
+Reading alignment file clustalo-I20261124-060142-0113-60514728-p1m.fa ... Fasta format detected
+Reading fasta file: done in 9.58443e-05 secs using 75.12% CPU
+Alignment most likely contains protein sequences
+Constructing alignment: done in 0.000346184 secs using 201.3% CPU
+Alignment has 9 sequences with 131 columns, 101 distinct patterns
+44 parsimony-informative, 32 singleton sites, 55 constant sites
+WARNING: Some sequence names are changed as follows:
+WP_037127040.1_cytochrome_c_family_protein_[Rhizobium_sp._CF097] -> WP_037127040.1_cytochrome_c_family_protein__Rhizobium_sp._CF097_
+NP_001285984.1_cytochrome_c_proximal,_isoform_B_[Drosophila_melanogaster] -> NP_001285984.1_cytochrome_c_proximal__isoform_B__Drosophila_melanogaster_
+NP_061820.1_cytochrome_c_[Homo_sapiens] -> NP_061820.1_cytochrome_c__Homo_sapiens_
+CBJ31344.1_Cytochrome_c_[Ectocarpus_siliculosus] -> CBJ31344.1_Cytochrome_c__Ectocarpus_siliculosus_
+KAE8767936.1_Cytochrome_c_[Hordeum_vulgare] -> KAE8767936.1_Cytochrome_c__Hordeum_vulgare_
+QEE59979.1_cytochrome_c_[Betula_platyphylla] -> QEE59979.1_cytochrome_c__Betula_platyphylla_
+KAE9612850.1_Cytochrome_c_[Lupinus_albus] -> KAE9612850.1_Cytochrome_c__Lupinus_albus_
+NP_001363126.1_cytochrome_c_[Vigna_radiata] -> NP_001363126.1_cytochrome_c__Vigna_radiata_
+
+                                                                           Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000201941 secs using 189.7% CPU
+   1  WP_037127040.1_cytochrome_c_family_protein__Rhizobium_sp._CF097_             3.05%    passed     98.31%
+   2  NP_001285984.1_cytochrome_c_proximal__isoform_B__Drosophila_melanogaster_   17.56%    passed     99.96%
+   3  NP_061820.1_cytochrome_c__Homo_sapiens_                                     19.85%    passed     93.87%
+   4  bartmosca                                                                   18.32%    passed     99.55%
+   5  CBJ31344.1_Cytochrome_c__Ectocarpus_siliculosus_                            20.61%    passed     99.97%
+   6  KAE8767936.1_Cytochrome_c__Hordeum_vulgare_                                 14.50%    passed     99.99%
+   7  QEE59979.1_cytochrome_c__Betula_platyphylla_                                13.74%    passed     99.93%
+   8  KAE9612850.1_Cytochrome_c__Lupinus_albus_                                   13.74%    passed     99.97%
+   9  NP_001363126.1_cytochrome_c__Vigna_radiata_                                 14.50%    passed    100.00%
+****  TOTAL                                                                       15.10%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+Checking for duplicate sequences: done in 0.000295162 secs using 113.8% CPU
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+Measuring multi-threading efficiency up to 8 CPU cores
+Increase to 10 rounds for branch lengths
+905 trees examined
+Threads: 1 / Time: 8.004 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -1300
+Threads: 2 / Time: 5.808 sec / Speedup: 1.378 / Efficiency: 69% / LogL: -1300
+Threads: 3 / Time: 4.876 sec / Speedup: 1.641 / Efficiency: 55% / LogL: -1300
+Threads: 4 / Time: 5.403 sec / Speedup: 1.481 / Efficiency: 37% / LogL: -1300
+Determining AUTO threadcount: done in 24.0911 secs using 212.3% CPU
+BEST NUMBER OF THREADS: 3
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -1159.333
+Optimal log-likelihood: -1159.164
+Proportion of invariable sites: 0.154
+Gamma shape alpha: 1.466
+Parameters optimization took 1 rounds (0.004 sec)
+Time for fast ML tree search: 0.022 seconds
+
+NOTE: ModelFinder requires 2 MB RAM!
+ModelFinder will test up to 1232 protein models (sample size: 131 epsilon: 0.100) ...
+Akaike Information Criterion:           DAYHOFF+G4
+Corrected Akaike Information Criterion: DAYHOFF+G4
+Bayesian Information Criterion:         DAYHOFF+G4
+Best-fit model: DAYHOFF+G4 chosen according to BIC
+
+All model information printed to iqtree3_local.model.gz
+CPU time for ModelFinder: 55.440 seconds (0h:0m:55s)
+Wall-clock time for ModelFinder: 25.709 seconds (0h:0m:25s)
+Generating 1000 samples for ultrafast bootstrap (seed: 377989)...
+
+NOTE: 1 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -1149.598
+2. Current log-likelihood: -1149.028
+Optimal log-likelihood: -1148.962
+Gamma shape alpha: 1.142
+Parameters optimization took 2 rounds (0.010 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.00441694 secs using 253.7% CPU
+Computing ML distances took 0.007264 sec (of wall-clock time) 0.011708 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000444174 secs using 87.58% CPU
+Constructing RapidNJ tree: done in 0.0049088 secs using 21.47% CPU
+Computing RapidNJ tree took 0.005512 sec (of wall-clock time) 0.001835 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -1148.961
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 0.046 second
+Computing log-likelihood of 78 initial trees ... 0.173 seconds
+Current best score: -1148.961
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -1148.960
+Iteration 10 / LogL: -1148.994 / Time: 0h:0m:26s
+Iteration 20 / LogL: -1149.011 / Time: 0h:0m:26s
+Finish initializing candidate tree set (2)
+Current best tree score: -1148.960 / CPU time: 0.452
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -1148.960
+Iteration 30 / LogL: -1149.052 / Time: 0h:0m:26s (0h:0m:1s left)
+UPDATE BEST LOG-LIKELIHOOD: -1148.960
+Iteration 40 / LogL: -1148.985 / Time: 0h:0m:26s (0h:0m:1s left)
+UPDATE BEST LOG-LIKELIHOOD: -1148.960
+Iteration 50 / LogL: -1148.966 / Time: 0h:0m:26s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1167.800
+UPDATE BEST LOG-LIKELIHOOD: -1148.960
+Iteration 60 / LogL: -1149.015 / Time: 0h:0m:26s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -1148.960
+Iteration 70 / LogL: -1149.038 / Time: 0h:0m:26s (0h:0m:0s left)
+Iteration 80 / LogL: -1148.981 / Time: 0h:0m:27s (0h:0m:0s left)
+Iteration 90 / LogL: -1149.026 / Time: 0h:0m:27s (0h:0m:0s left)
+Iteration 100 / LogL: -1149.040 / Time: 0h:0m:27s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1167.800
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:27s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -1148.960
+Optimal log-likelihood: -1148.960
+Gamma shape alpha: 1.153
+Parameters optimization took 1 rounds (0.003 sec)
+BEST SCORE FOUND : -1148.960
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+0.009 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file iqtree3_local.splits.nex
+Total tree length: 2.426
+
+Total number of iterations: 102
+CPU time used for tree search: 4.373 sec (0h:0m:4s)
+Wall-clock time used for tree search: 1.807 sec (0h:0m:1s)
+Total CPU time used: 60.049 sec (0h:1m:0s)
+Total wall-clock time used: 27.614 sec (0h:0m:27s)
+
+Computing bootstrap consensus tree...
+Reading input file iqtree3_local.splits.nex...
+9 taxa and 49 splits.
+Consensus tree written to iqtree3_local.contree
+Reading input trees file iqtree3_local.contree
+Log-likelihood of consensus tree: -1148.960
+
+Analysis results written to: 
+  IQ-TREE report:                iqtree3_local.iqtree
+  Maximum-likelihood tree:       iqtree3_local.treefile
+  Likelihood distances:          iqtree3_local.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          iqtree3_local.splits.nex
+  Consensus tree:                iqtree3_local.contree
+  Screen log file:               iqtree3_local.log
+
+Date and Time: Wed Nov 25 00:00:14 2026

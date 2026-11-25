@@ -1,0 +1,146 @@
+IQ-TREE 3.1.4 built Nov 24 2026
+
+Input file name: clustalo-I20261124-060142-0113-60514728-p1m.fa
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 429842
+
+REFERENCES
+----------
+
+To cite IQ-TREE 3 please use:
+
+Thomas K.F. Wong, Nhan Ly-Trong, Huaiyan Ren, Piyumal Demotte, Hector Banos,
+Andrew J. Roger, Edward Susko, Chris Bielow, Nicola De Maio, Nick Goldman,
+Matthew W. Hahn, Mario dos Reis, Le Sy Vinh, Gavin Huttley, Robert Lanfear, Bui Quang Minh (2026)
+IQ-TREE 3: Phylogenomic Inference Software using Complex Evolutionary Models.
+Molecular Biology and Evolution, msag117.
+https://doi.org/10.1093/molbev/msag117
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 9 sequences with 131 amino-acid sites
+Number of constant sites: 55 (= 41.9847% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 55 (= 41.9847% of all sites)
+Number of parsimony informative sites: 44
+Number of distinct site patterns: 101
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: DAYHOFF+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.1518
+
+ Category  Relative_rate  Proportion
+  1         0.1662         0.2500
+  2         0.5181         0.2500
+  3         1.0212         0.2500
+  4         2.2945         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -1148.9603 (s.e. 64.0474)
+Unconstrained log-likelihood (without tree): -581.0660
+Number of free parameters (#branches + #model parameters): 16
+Akaike information criterion (AIC) score: 2329.9206
+Corrected Akaike information criterion (AICc) score: 2334.6925
+Bayesian information criterion (BIC) score: 2375.9238
+
+Total tree length (sum of branch lengths): 2.4268
+Sum of internal branch lengths: 0.7587 (31.2650% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'WP_037127040.1_cytochrome_c_family_protein__Rhizobium_sp._CF097_' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / ultrafast bootstrap support (%)
+
++-----------------------------------------------------------WP_037127040.1_cytochrome_c_family_protein__Rhizobium_sp._CF097_
+|
+|                    +--------------NP_001285984.1_cytochrome_c_proximal__isoform_B__Drosophila_melanogaster_
++--------------------| (83.1/84)
+|                    |    +--NP_061820.1_cytochrome_c__Homo_sapiens_
+|                    +----| (75.3/74)
+|                         +--bartmosca
+|
+|           +-------------------CBJ31344.1_Cytochrome_c__Ectocarpus_siliculosus_
++-----------| (29.3/61)
+            |     +-----KAE8767936.1_Cytochrome_c__Hordeum_vulgare_
+            +-----| (29/45)
+                  |     +--QEE59979.1_cytochrome_c__Betula_platyphylla_
+                  |  +--| (72.8/72)
+                  |  |  +--KAE9612850.1_Cytochrome_c__Lupinus_albus_
+                  +--| (86.7/82)
+                     +**NP_001363126.1_cytochrome_c__Vigna_radiata_
+
+Tree in newick format:
+
+(WP_037127040.1_cytochrome_c_family_protein__Rhizobium_sp._CF097_:0.8738050631,(NP_001285984.1_cytochrome_c_proximal__isoform_B__Drosophila_melanogaster_:0.2257511671,(NP_061820.1_cytochrome_c__Homo_sapiens_:0.0444019904,bartmosca:0.0497004930)75.3/74:0.0846291621)83.1/84:0.3135356541,(CBJ31344.1_Cytochrome_c__Ectocarpus_siliculosus_:0.3015792429,(KAE8767936.1_Cytochrome_c__Hordeum_vulgare_:0.1017257491,((QEE59979.1_cytochrome_c__Betula_platyphylla_:0.0419567424,KAE9612850.1_Cytochrome_c__Lupinus_albus_:0.0223097442)72.8/72:0.0208912379,NP_001363126.1_cytochrome_c__Vigna_radiata_:0.0068369637)86.7/82:0.0578652590)29/45:0.0939731006)29.3/61:0.1878481729);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -1148.960364
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++----------------------------------------------------------WP_037127040.1_cytochrome_c_family_protein__Rhizobium_sp._CF097_
+|
+|                    +--------------NP_001285984.1_cytochrome_c_proximal__isoform_B__Drosophila_melanogaster_
++--------------------| (84)
+|                    |    +--NP_061820.1_cytochrome_c__Homo_sapiens_
+|                    +----| (74)
+|                         +--bartmosca
+|
+|           +-------------------CBJ31344.1_Cytochrome_c__Ectocarpus_siliculosus_
++-----------| (61)
+            |     +-----KAE8767936.1_Cytochrome_c__Hordeum_vulgare_
+            +-----| (45)
+                  |     +--QEE59979.1_cytochrome_c__Betula_platyphylla_
+                  |  +--| (72)
+                  |  |  +--KAE9612850.1_Cytochrome_c__Lupinus_albus_
+                  +--| (82)
+                     +--NP_001363126.1_cytochrome_c__Vigna_radiata_
+
+
+Consensus tree in newick format: 
+
+(WP_037127040.1_cytochrome_c_family_protein__Rhizobium_sp._CF097_:0.8732205308,(NP_001285984.1_cytochrome_c_proximal__isoform_B__Drosophila_melanogaster_:0.2256480462,(NP_061820.1_cytochrome_c__Homo_sapiens_:0.0443803474,bartmosca:0.0496991441)74:0.0846316004)84:0.3137509388,(CBJ31344.1_Cytochrome_c__Ectocarpus_siliculosus_:0.3007832029,(KAE8767936.1_Cytochrome_c__Hordeum_vulgare_:0.1016066756,((QEE59979.1_cytochrome_c__Betula_platyphylla_:0.0419122228,KAE9612850.1_Cytochrome_c__Lupinus_albus_:0.0222921196)72:0.0208675999,NP_001363126.1_cytochrome_c__Vigna_radiata_:0.0068494457)82:0.0578251799)45:0.0946988505)61:0.1871194894);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t iqtree3_local_rooted.treefile -m "DAYHOFF+G4{1.1518}" --length 131
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s clustalo-I20261124-060142-0113-60514728-p1m.fa --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s clustalo-I20261124-060142-0113-60514728-p1m.fa --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Wed Nov 25 00:00:57 2026
+Total CPU time used: 4.697524 seconds (0h:0m:4s)
+Total wall-clock time used: 1.710299015 seconds (0h:0m:1s)
+
